@@ -7,7 +7,7 @@ import yfinance as yf
 
 # Получаем исторические данные об акциях для указанного тикера и временного периода.
 # Возвращает DataFrame с данными.
-def fetch_stock_data(ticker, period='5y'):
+def fetch_stock_data(ticker, period= '1mo'):
     stock = yf.Ticker(ticker)
     data = stock.history(period=period)
     return data
